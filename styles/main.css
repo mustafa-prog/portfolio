@@ -42,7 +42,7 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 9.6rem;
+  font-size: 8.5rem;
 }
 h1.sm-heading,
 h2.sm-heading,
@@ -295,6 +295,8 @@ main#about .lg-heading {
 main#about .sm-heading {
   max-width: 90rem;
   margin: auto;
+  margin-bottom: 6rem;
+  margin-top: 3.5rem;
   text-align: justify;
   line-height: 150%;
 }
@@ -305,6 +307,8 @@ main#about .skills-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 3rem;
+  border: 0.1rem solid #eece1a;
+  padding: 2rem;
 }
 main#about .skills-container .logo-container {
   display: flex;
@@ -343,7 +347,7 @@ main#work .container {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 3rem;
+  padding: 1.8rem;
   color: #000;
 }
 main#work .container .card {
@@ -502,6 +506,19 @@ main#contact .contact-form .submit-button:hover {
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  :root {
+    font-size: 60%;
+  }
+
+  main#about h1.lg-heading {
+    margin-top: 13vh;
+  }
+
+  main#about h2.sm-heading {
+    margin-bottom: 6rem;
+    margin-top: 3.5rem;
+  }
+
   main#about .skills-container {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -513,6 +530,10 @@ main#contact .contact-form .submit-button:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  :root {
+    font-size: 55%;
+  }
+
   main {
     text-align: center;
   }
@@ -521,6 +542,7 @@ main#contact .contact-form .submit-button:hover {
     margin-bottom: 1rem;
   }
   main#about .lg-heading {
+    margin-top: 13vh;
     margin-bottom: 5rem;
   }
 
@@ -536,34 +558,66 @@ div.menu-branding.show {
   }
 
   .menu-nav {
-    height: 75vh;
+    height: 70vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 2.4rem;
   }
 
   .menu-branding {
-    height: 25vh;
+    height: 30vh;
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
     background-image: url("../images/profile-foto-small.jpg");
-    width: 15rem;
-    height: 15rem;
+    width: 135px;
+    height: 135px;
     clip-path: circle(50% at 50% 50%);
   }
 
   main#about .skills-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  main#work h1.lg-heading {
+    margin-top: 13vh;
+    margin-bottom: 2.5rem;
+  }
+
+  main#contact h1.lg-heading {
+    margin-top: 13vh;
+  }
 }
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 13vh;
+  :root {
+    font-size: 50%;
+  }
+
+  main {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  main#home h1.lg-heading {
+    margin-top: 19vh;
+    margin-bottom: 2rem;
     text-align: center;
   }
 
+  main#about h1.lg-heading {
+    margin-top: 13vh;
+  }
+
   main#about .skills-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main#work h1.lg-heading {
+    margin-top: 13vh;
+    margin-bottom: 2rem;
+  }
+
+  main#contact h1.lg-heading {
+    margin-top: 13vh;
   }
 }
 
