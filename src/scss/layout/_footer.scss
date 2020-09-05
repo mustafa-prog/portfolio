@@ -1,0 +1,49 @@
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: darken($color: $primary-color, $amount: 10);
+  color: set-text-color($primary-color);
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0;
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      a {
+        margin-bottom: 2.5rem;
+
+        i {
+          vertical-align: middle;
+          @include easeOut;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      margin: 3rem 0;
+
+      i {
+        margin-bottom: 2rem;
+        font-size: 1.9rem;
+      }
+    }
+
+    p {
+      margin: 2.5rem 0 1rem 0;
+    }
+  }
+}

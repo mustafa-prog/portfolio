@@ -1,0 +1,53 @@
+main#about {
+  max-width: 120rem;
+  margin: auto;
+  min-height: 100vh;
+
+  .lg-heading {
+    margin-top: 5vh;
+  }
+
+  .sm-heading {
+    max-width: 90rem;
+    margin: auto;
+    text-align: justify;
+    line-height: 150%;
+  }
+
+  .skills-container {
+    max-width: 90rem;
+    margin: auto;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      i {
+        font-size: 6rem;
+        margin-bottom: 0.4rem;
+      }
+
+      p {
+        @include easeOut;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+
+      .devicon-bootstrap-plain {
+        color: rgb(165, 72, 189);
+      }
+
+      .redux-logo {
+        width: 6rem;
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+}

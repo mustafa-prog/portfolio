@@ -1,0 +1,11 @@
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: $primary-color;
+
+  .logo-link img {
+    display: inline-block;
+    margin-left: 2rem;
+  }
+}

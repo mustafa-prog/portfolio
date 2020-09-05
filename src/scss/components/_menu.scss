@@ -1,0 +1,133 @@
+.menu-btn {
+  position: absolute;
+  right: 3.5rem;
+  top: 3.5rem;
+  z-index: 20;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 2.8rem;
+    height: 0.3rem;
+    background-color: set-text-color($primary-color);
+    margin-bottom: 0.5rem;
+    @include easeOut;
+  }
+
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      //Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(0.5rem, 0.5rem);
+      }
+      //Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      //Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(0.7rem, -0.6rem);
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  //opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    background-color: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide in from top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &-branding {
+    background-color: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 35rem;
+      height: 35rem;
+      background-image: url('../images/profile-foto.jpg');
+      clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        75% 100%,
+        25% 100%,
+        0% 60%,
+        10% 20%
+      );
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(60rem, 0, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    padding: 1rem 0;
+    position: relative;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: set-text-color($primary-color);
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+//Delay each nav item slide
+@for $i from 1 through 4 {
+  .nav-item:nth-child(#{$i}) {
+    transition-delay: $i * 0.1s;
+  }
+}
