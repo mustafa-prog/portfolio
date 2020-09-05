@@ -10,6 +10,8 @@ main#about {
   .sm-heading {
     max-width: 90rem;
     margin: auto;
+    margin-bottom: 6rem;
+    margin-top: 3.5rem;
     text-align: justify;
     line-height: 150%;
   }
@@ -21,6 +23,8 @@ main#about {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 3rem;
+    border: 0.1rem solid $secondary-color;
+    padding: 2rem;
 
     .logo-container {
       display: flex;
