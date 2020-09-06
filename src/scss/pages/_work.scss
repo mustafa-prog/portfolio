@@ -65,22 +65,47 @@ main#work {
         opacity: 0;
         transition: 0.3s ease-in-out;
 
-        h2 {
+        h2.project-name {
           margin-top: -2rem;
           margin-bottom: 1rem;
           line-height: 2.8rem;
           font-weight: 700;
         }
 
-        p {
+        p.project-description {
           margin-bottom: 1.3rem;
+          font-size: 1.9rem;
 
           span {
             display: inline-block;
             margin-top: 0.5rem;
           }
         }
+
+        a {
+          font-size: 1.9rem;
+        }
       }
+    }
+  }
+  #other-projects-button {
+    border: 0.25rem solid #fff;
+    border-radius: 0.3rem;
+    padding: 0.5rem 2rem;
+    margin-top: 3rem;
+    margin: auto;
+    display: block;
+    max-width: 25%;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    background-color: $secondary-color;
+    color: #444;
+    @include easeOut;
+
+    &:hover {
+      background-color: #fff;
+      border-color: $secondary-color;
     }
   }
 }
