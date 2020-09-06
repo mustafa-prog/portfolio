@@ -224,6 +224,7 @@ header .logo-link img {
 }
 #main-footer .footer-content .icons a {
   margin-bottom: 2.5rem;
+  font-size: 17px;
 }
 #main-footer .footer-content .icons a i {
   vertical-align: middle;
@@ -237,40 +238,43 @@ header .logo-link img {
   flex-direction: column;
   margin: 3rem 0;
 }
-#main-footer .footer-content .contact-container i {
+#main-footer .footer-content .contact-container span {
   margin-bottom: 2rem;
-  font-size: 1.9rem;
+  font-size: 17px;
+  font-family: "Lato", sans-serif;
 }
 #main-footer .footer-content p {
   margin: 2.5rem 0 1rem 0;
+  font-size: 17px;
 }
 
 main {
   padding: 6.4rem;
   min-height: calc(100vh - 6rem);
 }
-main .icons {
-  margin-top: 1.6rem;
-}
-main .icons a {
-  padding: 0.6rem;
-  transition: all 0.5s ease-out;
-}
-main .icons a:hover {
-  color: #eece1a;
-}
+
 main#home {
   overflow: hidden;
   max-width: 120rem;
   margin: auto;
 }
-main#home h1 {
+main#home h1.lg-heading {
   margin-top: 20vh;
+}
+main#home .icons {
+  margin-top: 1.6rem;
+}
+main#home .icons a {
+  padding: 0.6rem;
+  transition: all 0.5s ease-out;
+}
+main#home .icons a:hover {
+  color: #eece1a;
 }
 main#home #contact-me-button {
   border: 0.25rem solid #fff;
   border-radius: 0.3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   display: inline-block;
   margin-top: 3rem;
   font-size: 2.2rem;
@@ -393,18 +397,41 @@ main#work .container .card .content {
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-main#work .container .card .content h2 {
+main#work .container .card .content h2.project-name {
   margin-top: -2rem;
   margin-bottom: 1rem;
   line-height: 2.8rem;
   font-weight: 700;
 }
-main#work .container .card .content p {
+main#work .container .card .content p.project-description {
   margin-bottom: 1.3rem;
+  font-size: 1.9rem;
 }
-main#work .container .card .content p span {
+main#work .container .card .content p.project-description span {
   display: inline-block;
   margin-top: 0.5rem;
+}
+main#work .container .card .content a {
+  font-size: 1.9rem;
+}
+main#work #other-projects-button {
+  border: 0.25rem solid #fff;
+  border-radius: 0.3rem;
+  padding: 0.5rem 2rem;
+  margin-top: 3rem;
+  margin: auto;
+  display: block;
+  max-width: 25%;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  background-color: #eece1a;
+  color: #444;
+  transition: all 0.5s ease-out;
+}
+main#work #other-projects-button:hover {
+  background-color: #fff;
+  border-color: #eece1a;
 }
 
 main#contact {
@@ -558,20 +585,33 @@ div.menu-branding.show {
   }
 
   .menu-nav {
-    height: 70vh;
+    height: 65vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 2.4rem;
   }
 
   .menu-branding {
-    height: 30vh;
+    height: 35vh;
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
     background-image: url("../images/profile-foto-small.jpg");
-    width: 135px;
-    height: 135px;
+    width: 150px;
+    height: 150px;
     clip-path: circle(50% at 50% 50%);
+  }
+
+  main#home .icons {
+    margin-top: 5rem;
+  }
+  main#home .icons a {
+    font-size: 2.5rem;
+    margin: 0 1.5rem;
+  }
+  main#home #contact-me-button {
+    padding: 1rem 9rem;
+    margin-top: 5rem;
+    font-size: 2.5rem;
   }
 
   main#about .skills-container {
@@ -581,6 +621,9 @@ div.menu-branding.show {
   main#work h1.lg-heading {
     margin-top: 13vh;
     margin-bottom: 2.5rem;
+  }
+  main#work #other-projects-button {
+    font-size: 2.5rem;
   }
 
   main#contact h1.lg-heading {
@@ -603,6 +646,21 @@ div.menu-branding.show {
     text-align: center;
   }
 
+  main#home .icons {
+    margin-top: 5rem;
+  }
+
+  main#home .icons a {
+    font-size: 2.5rem;
+    margin: 0 1.5rem;
+  }
+
+  main#home #contact-me-button {
+    padding: 1rem 9rem;
+    margin-top: 5rem;
+    font-size: 2.5rem;
+  }
+
   main#about h1.lg-heading {
     margin-top: 13vh;
   }
@@ -614,6 +672,10 @@ div.menu-branding.show {
   main#work h1.lg-heading {
     margin-top: 13vh;
     margin-bottom: 2rem;
+  }
+  main#work #other-projects-button {
+    max-width: 50%;
+    font-size: 2.5rem;
   }
 
   main#contact h1.lg-heading {
